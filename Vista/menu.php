@@ -9,12 +9,10 @@
 	<body>
 		<nav class="col-xs-12">
 			<center>
-			<div class="btn-group">
-				<button style=background-color:white type="button" class="btn btn-primary btn-lg dropdown-toggle"><a href="index.php?pag=bienvenida">&nbsp; Inicio </a></button>
-			</div>
+			<button style=background-color:white type="button" class="btn btn-primary btn-lg dropdown-toggle"><a href="index.php?pag=bienvenida">&nbsp; Inicio </a></button>
 			<?php
 				if($_SESSION['rol'] == 1){
-					echo '<div class="btn-group">
+					echo '
 						<button type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown"> Medicos <span class="caret"></span></button>
 
 						<ul class="dropdown-menu" role="menu">
@@ -24,8 +22,7 @@
 						<li class="divider"></li>
 						<li><a href="inicio.php?pag=Eliminar_Medicos">Borrar</a></li>
 						</ul>
-					</div>
-					<div class="btn-group">
+
 						<button type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown"> Pacientes <span class="caret"></span></button>
 
 						<ul class="dropdown-menu" role="menu">
@@ -35,8 +32,7 @@
 						<li class="divider"></li>
 						<li><a class="dropdown-item" href="inicio.php?pag=Eliminar_Pacientes">Borrar</a></li>
 						</ul>
-					</div>
-					<div class="btn-group">
+
 						<button type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown"> Consultorios <span class="caret"></span></button>
 
 						<ul class="dropdown-menu" role="menu">
@@ -46,8 +42,7 @@
 						<li class="divider"></li>
 						<li><a href="inicio.php?pag=Eliminar_Consultorios">Borrar</a></li>
 						</ul>
-					</div>
-					<div class="btn-group">
+
 						<button type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown"> Citas <span class="caret"></span></button>
 
 						<ul class="dropdown-menu" role="menu">
@@ -57,8 +52,7 @@
 						<li class="divider"></li>
 						<li><a href="inicio.php?pag=Eliminar_Citas">Borrar</a></li>
 						</ul>
-					</div>
-					<div class="btn-group">
+
 						<button type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown"> usuario <span class="caret"></span></button>
 
 						<ul class="dropdown-menu" role="menu">
@@ -68,8 +62,7 @@
 						<li class="divider"></li>
 						<li><a href="inicio.php?pag=Eliminar_Usuarios">Borrar Usuarios </a></li>
 						</ul>
-					</div>
-					<div class="btn-group">
+
 						<button type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown"> Registros <span class="caret"></span></button>
 
 						<ul class="dropdown-menu" role="menu">
@@ -79,52 +72,46 @@
 						<li><a href="inicio.php?pag=Lista_Consultorios">Registros de Consultorios</a></li>
 						<li><a href="inicio.php?pag=Lista_Citas_Asignadas">Registros de Citas asignadas</a></li>
 						<li><a href="inicio.php?pag=Lista_Citas_Atendidas">Registros de Citas atendidas</a></li>
-						</ul>
-					</div>';
+						</ul>';
 				}if($_SESSION['rol'] == 2){
-					echo '<div class="btn-group">
+					echo '
 						<button type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown"> Medicos <span class="caret"></span></button>
 
 						<ul class="dropdown-menu" role="menu">
 						<li><a href="inicio.php?pag=Consulta_Medicos">Consultar</a></li>
 						</ul>
-					</div>
-					<div class="btn-group">
+
 						<button type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown"> Pacientes <span class="caret"></span></button>
 
 						<ul class="dropdown-menu" role="menu">
 						<li><a href="inicio.php?pag=Consulta_Pacientes">Consultar</a></li>
 						</ul>
-					</div>
-					<div class="btn-group">
+
 						<button type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown"> Consultorios <span class="caret"></span></button>
 
 						<ul class="dropdown-menu" role="menu">
 						<li><a href="inicio.php?pag=Consulta_Consultorios">Consultar</a></li>
 						</ul>
-					</div>
-					<div class="btn-group">
+
 						<button type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown"> Citas <span class="caret"></span></button>
 
 						<ul class="dropdown-menu" role="menu">
 						<li><a href="inicio.php?pag=Consulta_Citass">Consultar</a></li>
 						<li><a href="inicio.php?pag=Actualizar_Citas">Actualizar</a></li>
-						</ul>
-					</div>';
+						</ul>';
 				}if($_SESSION['rol'] == 3){
-					echo '<div class="btn-group">
+					echo '
 						<button type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown"> Citas <span class="caret"></span></button>
 
 						<ul class="dropdown-menu" role="menu">
 						<li><a href="inicio.php?pag=Registro_Citas">Agendar Citas</a></li>
 						<li><a href="inicio.php?pag=Consulta_Citass">Consultar Citas</a></li>
-						</ul>
-					</div>';
+						</ul>';
 					
 				}
-				echo '<div class="btn-group">
+				echo '
 					<button style=background-color:white type="button" class="btn btn-primary btn-lg dropdown-toggle" ><a href="index.php?pag=login">&nbsp; Cerrar sesion </a></button>
-				</div></center>';
+				</center>';
 			?>
 		</nav><br>
 	</body>

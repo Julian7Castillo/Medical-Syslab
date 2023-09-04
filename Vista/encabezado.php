@@ -8,7 +8,7 @@
     <body>
         <header>
             <div class="container">
-                <h1><img src=" img/logo.png"al="logo" style="width:50px;height:50px;"> Medical SysLab </h1>
+                <h1><img src="img/logoMS.png"al="logo" style="width:50px;height:50px;"> Medical SysLab </h1>
                 <?php  
                     if($pag != 'login'){
                 ?>

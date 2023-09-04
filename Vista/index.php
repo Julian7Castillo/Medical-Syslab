@@ -22,8 +22,11 @@
     	<!--llamado a estilos del framwork bootstrap-->
     	<link rel="stylesheet" href="css/bootstrap.min.css">
 
+		<!--Lineas de cambio de icono en la ventana y el nombre en la ventana-->
+        <link rel="icon" href="img/logoMS.png" type="image/x-icon">
 		<title>Medical SysLab</title>
 	</head>
+
 	<body>
 		<?php
 			if ($msj==2){
