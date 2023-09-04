@@ -22,7 +22,7 @@
 	}
 	else
 	{
-		header("location:../vista/index.php?msj=2?pag=login");  
+		header("location:../vista/index.php?msj=2");  
 		//msj=2, quiere decir que el usuario no esta registrado
 	}
 ?>

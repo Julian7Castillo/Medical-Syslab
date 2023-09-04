@@ -1,14 +1,15 @@
 <?php
 	session_start();
 	extract ($_REQUEST);
-	if (!isset($_REQUEST['pag'])){
-    	$pag='login';
-	}
 	if (!isset($_REQUEST['msj'])){
 		$msj=0;
 	}
+	if (!isset($_REQUEST['pag'])){
+    	$pag='login';
+	}
 	else
 ?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -28,12 +29,6 @@
 	</head>
 
 	<body>
-		<?php
-			if ($msj==2){
-				echo '<br><br><div class="alert alert-danger text-center">Error de usuario y/o contraseña son incorrectos </div>';
-			}
-		?>
-
 		<!--encabezado con icono y tutulo-->
 		<?php include "encabezado.php";?>
 
@@ -42,12 +37,16 @@
 			<section class="row">
 				<?php 
 					if($pag != 'login'){
-						include "menu.php" ;
+						include "menu.php";
 					}						
+				?>
+				<?php
+					if ($msj==2)
+						echo '<br><br><div class="alert alert-danger text-center">Error de usuario y/o contraseña son incorrectos </div>';
 				?>
 				<div class="container">
 					<div id="divContenido"> 
-						<?php include $pag.".php" ;?> 
+						<?php include $pag.".php";?> 
 					</div>
 			</section>
 		</div>

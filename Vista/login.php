@@ -21,7 +21,7 @@
 					<form action="../controlador/validacionIniciosesion.php" mothod="post">
 						<p><center><h2>Bienvenido a nuestro centro medico virtual por favor inicie sesion</h2><br><br>
 						<h3>Usuario: <br>
-						<INPUT type="text" name="usuario"><br>
+						<INPUT type="text" name="usuario"><br><br>
 						Contraseña: <br>
 						<INPUT type="password" name ="psw"><br><br>
 						<button class="btn btn-primary btn-lg" type="submit" >Iniciar sesion</button></h3></center>
@@ -30,7 +30,7 @@
 
 				<aside class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
 					<p>
-						<h2>Gracias por visitar nuestra sitio web esperamos tengas una gran atencion con nuestros servicios y accesibilidad, siempre buscamos lo mejor para nuestros usuarios no olvides dejarnos tus opiniones.<h2> 
+						<h2>Gracias por visitar nuestra sitio web esperamos tengas una gran atención con nuestros servicios y accesibilidad, siempre buscamos lo mejor para nuestros usuarios no olvides dejarnos tus opiniones.<h2><br> 
 					</p>
 				</aside>
 			</section>
