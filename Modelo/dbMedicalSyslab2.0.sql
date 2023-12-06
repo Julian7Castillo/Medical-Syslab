@@ -91,7 +91,7 @@ CALL inscon('CONSULTORIO-102');
 CALL inscon('CONSULTORIO-103');
 CALL inscon('CONSULTORIO-104');
 
-CREATE PROCEDURE inscit(feccit DATE, horacit TIME, paccit INT(11), medcit INT(11), concit INT(11))
+CREATE PROCEDURE inscit(feccit DATE, horacit TIME, paccit BIGINT, medcit BIGINT, concit INT(11))
 INSERT INTO citas(citFecha,citHora,citPaciente,citMedico,citConsultorio) 
 VALUES (feccit, horacit, paccit, medcit, concit);
 
@@ -102,8 +102,8 @@ CALL inscit(20231001,'18:30:00',27345892,62836173,3);
 
 #crear hasta aquí
 #actualizacion
-UPDATE usuarios SET usuRol='$rol', usunom='$nombre',usuPassword ='$password', usuEstado='$estado' 
-WHERE usLogin ='$identificacion';
+#UPDATE usuarios SET usuRol='$rol', usunom='$nombre',usuPassword ='$password', usuEstado='$estado' 
+#WHERE usLogin ='$identificacion';
 
 CREATE PROCEDURE upusu(usur INT, usLo CHAR(15), usun VARCHAR(30), usuP VARCHAR(60), usuEs ENUM('Activo','Inactivo'))
 UPDATE usuarios SET usuRol=usur, usunom=usun, usuPassword=usuP , usuEstado=usuEs

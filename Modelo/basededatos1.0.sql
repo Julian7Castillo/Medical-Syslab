@@ -81,6 +81,7 @@ INSERT INTO roles(id_rol, nombre_rol)
 VALUES (3,"Paciente");
 
 #prcedimientos
+#insertar
 CREATE PROCEDURE inspac(idpac CHAR(15), nompac VARCHAR(50), apepac VARCHAR(50), fecnacpac DATE, sexpac ENUM('Femenino','Masculino'))
 INSERT INTO pacientes(pacIdentification, pacNombres, pacApellidos, pacFechaNacimiento,pacSexo) 
 VALUES (idpac, nompac, apepac, fecnacpac, sexpac);
@@ -126,6 +127,7 @@ CALL insusu('123', 1, 'Julián', '123');
 CALL insusu('456', 2, 'David', '456');
 CALL insusu('789', 3, 'Marlon', '789');
 
+#actualizar
 UPDATE usuarios SET usuRol='$rol', usunom='$nombre',usuPassword ='$password', usuEstado='$estado' 
 WHERE usLogin ='$identificacion';
 
@@ -134,3 +136,7 @@ UPDATE usuarios SET usuRol=usur, usunom=usun, usuPassword=usuP , usuEstado=usuEs
 WHERE usLogin = usLo;
 
 CALL upusu(1,1002523892,'David','169','Activo');
+
+#eliminar
+
+#vistas
