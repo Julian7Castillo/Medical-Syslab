@@ -18,13 +18,13 @@
     	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<!--link de la hoja de estilos en cascada css-->
-		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="Vista/css/styles.css">
 
     	<!--llamado a estilos del framwork bootstrap-->
-    	<link rel="stylesheet" href="css/bootstrap.min.css">
+    	<link rel="stylesheet" href="Vista/css/bootstrap.min.css">
 
 		<!--Lineas de cambio de icono en la ventana y el nombre en la ventana-->
-        <link rel="icon" href="img/logoMS.png" type="image/x-icon">
+        <link rel="icon" href="Vista/img/logoMS.png" type="image/x-icon">
 		<title>Medical SysLab</title>
 	</head>
 

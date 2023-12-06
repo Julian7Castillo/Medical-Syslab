@@ -1,7 +1,7 @@
 <?php
 class Usuario
 {
-	private $usucc;
+	private $identificacion;
 	private $rol;
 	private $nombre;
 	private $apellido;
