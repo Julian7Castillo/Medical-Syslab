@@ -17,7 +17,7 @@
 				deacuerdo a su tipo de usuario, siempre buscamos lo mejor para nuestros usuarios no 
 				olvides dejarnos tus opiniones y comentarios para mejorar nuestros sevicios.
 			</h3></p><br><br>
-			<img src=" img/imagen.jpg"al="logo" style="width:350px;height:250px;"><br><br></center>
+			<img src="Vista/img/imagen.jpg"al="logo" style="width:350px;height:250px;"><br><br></center>
 		</article>
 	</body>
 </html>

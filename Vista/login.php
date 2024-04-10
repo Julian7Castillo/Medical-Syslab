@@ -18,7 +18,7 @@
 		<div class="container">
 			<section class="main row">
 				<article class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
-					<form action="../controlador/validacionIniciosesion.php" mothod="post">
+					<form action="controlador/validacionIniciosesion.php" mothod="post">
 						<p><center><h2>Bienvenido a nuestro centro medico virtual por favor inicie sesion</h2><br><br>
 						<h3>Usuario: <br>
 						<INPUT type="text" name="usuario"><br><br>

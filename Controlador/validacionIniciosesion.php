@@ -18,11 +18,11 @@
 		$usuario=$resultado->fetch_object() or die ("Error");
 		$_SESSION['user']= $usuario->usucc;
 		$_SESSION['rol']= $usuario->usuRol;
-		header("location:../vista/index.php?pag=bienvenida");
+		header("location:../index.php?pag=bienvenida");
 	}
 	else
 	{
-		header("location:../vista/index.php?msj=2");  
+		header("location:../index.php?msj=2");  
 		//msj=2, quiere decir que el usuario no esta registrado
 	}
 ?>

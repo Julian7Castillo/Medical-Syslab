@@ -18,7 +18,7 @@ CREATE TABLE usuarios
     susTelefono CHAR(15) NOT NULL,
     Especialidad VARCHAR(100),
     usuPassword VARCHAR(60) NOT NULL,
-    usuEstado ENUM('Activo','Inactivo'));
+    usuEstado ENUM('Activo','Inactivo', 'Bloqueado'));
 
 CREATE TABLE consultorios
     (idConsultorio INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -55,7 +55,7 @@ CHARACTER SET utf8mb4
 COLLATE utf8mb4_general_ci 
 NOT NULL DEFAULT 'Asignado';
 
-ALTER TABLE `usuarios` CHANGE `usuEstado` `usuEstado` ENUM('Activo','Inactivo') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT 'Activo';
+ALTER TABLE `usuarios` CHANGE `usuEstado` `usuEstado` ENUM('Activo','Inactivo', 'Bloqueado') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT 'Activo';
 
 #insertar datos
 INSERT INTO roles(id_rol, nombre_rol) 
@@ -100,7 +100,7 @@ CALL inscit(20230623,'14:00:00',31782646,926371534,2);
 CALL inscit(20230816,'16:15:00',10274836,28461832,4);
 CALL inscit(20231001,'18:30:00',27345892,62836173,3);
 
-#crear hasta aquí
+#crear hasta aquí por qeu el resto no funciona
 #actualizacion
 #UPDATE usuarios SET usuRol='$rol', usunom='$nombre',usuPassword ='$password', usuEstado='$estado' 
 #WHERE usLogin ='$identificacion';

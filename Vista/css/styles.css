@@ -1,11 +1,15 @@
 header{
     background:#2c3e5a;
     color:#fff;
+    padding: 0px 20px 0px 20px;
+    margin: 0px 0px 0px 0px;
 }
 
 nav{
     background:black;
     color:#fff;
+    display: flex;
+    justify-content: center;
 }
 
 aside{
@@ -25,4 +29,12 @@ aside{
 footer{
     background: #2c3e5a;
     color: #fff;
+    
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 0px 0px 0px;
 }

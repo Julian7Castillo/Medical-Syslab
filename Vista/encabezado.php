@@ -7,12 +7,12 @@
     </head>
     <body>
         <header>
-            <div class="container">
-                <h1><img src="img/logoMS.png"al="logo" style="width:50px;height:50px;"> Medical SysLab </h1>
+            <div class="flex">
+                <h1><img src="Vista/img/logoMS.png"al="logo" style="width:80px;height:80px;"> Medical SysLab</h1>
                 <?php  
                     if($pag != 'login'){
                 ?>
-                <h7>Usuario: <?php echo$_SESSION['user']; ?> Rol: 
+                <h7>Usuario: <?php echo$_SESSION['user']; ?><br> Rol: 
                 <?php 
                     if($_SESSION['rol'] == 1){
                         echo 'Administrador'; 
