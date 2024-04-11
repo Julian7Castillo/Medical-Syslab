@@ -38,3 +38,9 @@ footer{
     align-items: center;
     margin: 0px 0px 0px 0px;
 }
+
+.btn-custom{
+    position:unset;
+    /*top: auto;*/
+    /*left: auto;*/
+}
