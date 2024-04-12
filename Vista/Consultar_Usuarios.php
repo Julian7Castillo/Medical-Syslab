@@ -5,30 +5,8 @@
     	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     	<meta name="viewport" content="width=device-width, initial-scale=1">
     	<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css">
 		<title>Centro Medico</title>
-
-		<!--estilos css edicionales personalizados-->
-		<style type="text/css">
-			a:link{
-				color: blue;
-			}
-			header{
-				background:#2c3e5a;
-				color:#fff;
-			}
-			nav{
-				background:black;
-				color:#fff;
-			}
-			aside{
-				background: #c0392b;
-				color: #fff;
-			}
-			footer{
-				background: #2c3e5a;
-				color: #fff;
-			}
-		</style>
 	</head>
 
 	<body>
@@ -50,8 +28,8 @@
 		
 		<?php
 		extract ($_POST); 
-		require "../Modelo/conecta.php";
-		require "../Modelo/ClaseUsuario.php";
+		require "./Modelo/conecta.php";
+		require "./Modelo/ClaseUsuario.php";
 
 		if (isset($_POST['usuario'])) {
 			$objUsuario= new Usuario();

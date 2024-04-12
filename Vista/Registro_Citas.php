@@ -1,11 +1,11 @@
-<?php<?php
-  require "../Modelo/conecta.php";
+<?php
+  require "./Modelo/conecta.php";
   $objConexion = Conectarse();
 
-  $sql="Select idMedico, medNombres, medApellidos, medEspecialidad from medicos";
+  $sql="Select usucc, usuNombre, usuApellidos, Especialidad from usuarios Where usuRol = 2";
   $medicos=$objConexion->query($sql);
 
-  $sql= "select idPaciente, pacIdentification, pacNombres, pacApellidos from pacientes";
+  $sql= "select usucc, usuNombre, usuApellidos from usuarios Where usuRol = 3";
   $pacientes=$objConexion->query($sql);
 
   $sql="select * from consultorios";
@@ -18,30 +18,8 @@
     	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     	<meta name="viewport" content="width=device-width, initial-scale=1">
     	<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css">
 		<title>Centro Medico</title>
-
-		<!--estilos css edicionales personalizados-->
-		<style type="text/css">
-			a:link{
-				color: blue;
-			}
-			header{
-				background:#2c3e5a;
-				color:#fff;
-			}
-			nav{
-				background:black;
-				color:#fff;
-			}
-			aside{
-				background: #c0392b;
-				color: #fff;
-			}
-			footer{
-				background: #2c3e5a;
-				color: #fff;
-			}
-		</style>
 	</head>
 
 	<body>
@@ -70,7 +48,7 @@
 				          while ($paciente=$pacientes->fetch_object()){
 				            ?>
 				              <option value="<?php echo $paciente->idPaciente;?> ">
-				              <?php echo $paciente->pacIdentification." - ".$paciente->pacNombres." ".$paciente->pacApellidos;?>
+				              <?php echo $paciente->usucc." - ".$paciente->usuNombre." ".$paciente->usuApellidos;?>
 				              </option>
 				          <?php 
 				          }
@@ -87,7 +65,7 @@
 				            while ($medico=$medicos->fetch_object()){
 				            ?>
 				                <option value="<?php echo $medico->idMedico;?>">
-				                <?php echo $medico->medNombres." ".$medico->medApellidos. " ( ".$medico->medEspecialidad." )" ?> 
+				                <?php echo $medico->usuNombre." ".$medico->usuApellidos. " ( ".$medico->Especialidad." )" ?> 
 				                </option>
 				            <?php 
 				            }
