@@ -90,7 +90,7 @@ class Usuario
 	public function ConsultarUsuario($identificacion)
 	{
 		$this->Conexion=Conectarse();
-		$sql="SELECT nombre_rol, usLogin, usunom, usuPassword, usuEstado FROM roles INNER JOIN usuarios ON usuRol = id_Rol WHERE usLogin = '$identificacion';";
+		$sql="SELECT usucc, usuRol, usuNombre, usuApellidos, usuPassword, usuEstado FROM roles INNER JOIN usuarios ON usuRol = id_Rol WHERE usucc = '$identificacion';";
 		$resultado=$this->Conexion->query($sql);
 		$this->Conexion->close();
 		return $resultado;		

@@ -44,3 +44,8 @@ footer{
     /*top: auto;*/
     /*left: auto;*/
 }
+
+.resultOperation{
+    text-align: center;
+    margin: 20rem 20rem
+}
