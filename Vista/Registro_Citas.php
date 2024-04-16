@@ -24,9 +24,9 @@
 
 	<body>
 		<article class="col-xs-12">
-			<center><h2>Registro de Citas</h2>					
+			<h2 class="text-center">Registro de Citas</h2>					
 			<FORM action= "/CentroMedico/Controlador/Validacion_insertar_Citas.php" method="post" class="form-horizontal">
-				<p><h3><b>Datos de la cita</b><br></h3></center><br>
+				<p><h3><b>Datos de la cita</b><br></h3><br>
 				<div class="form-group">
 					<label class="control-label col-md-2">Fecha: </label>
 					<div class="col-md-10">

@@ -36,8 +36,9 @@
 		<title>Centro Medico</title> 
 	</head>
 	<body><br>
+		<h2 class="text-center">Eliminar Citas</h2>
 		<FORM action= "/CentroMedico/Controlador/Validacion_Borrar_Citas.php" method="post" class="form-horizontal">
-			<P><h3><b>Datos personales</b></center><br><br></h3>
+			<P><h3><b>Datos personales</b><br><br></h3>
 			<h4>
 			</div><br><br>
 			<div class="form-group">

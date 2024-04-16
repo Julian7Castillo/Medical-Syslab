@@ -10,14 +10,14 @@
 	</head>
 	<body>
 		<article class="col-xs-12">
-			<center><h2>Bienvenido a Medical Syslab nuestro centro medico virtual</h2><br><br>
-			<p><h3>
+			<h2 class="text-center">Bienvenido a Medical Syslab nuestro centro medico virtual</h2><br><br>
+			<p><h3 class="text-center">
 				Gracias por visitar nuestra sitio web esperamos tengas una gran atencion con nuestros 
 				servicios y accesibilidad, en la parte superior tendras acceso a las opciones disponibles
 				deacuerdo a su tipo de usuario, siempre buscamos lo mejor para nuestros usuarios no 
 				olvides dejarnos tus opiniones y comentarios para mejorar nuestros sevicios.
 			</h3></p><br><br>
-			<img src="Vista/img/imagen.jpg"al="logo" style="width:350px;height:250px;"><br><br></center>
+			<img class="text-center" src="Vista/img/imagen.jpg"al="logo" style="width:350px;height:250px;"><br><br>
 		</article>
 	</body>
 </html>

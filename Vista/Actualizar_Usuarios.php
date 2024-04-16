@@ -20,8 +20,9 @@ $resultado=$objUsuario->ConsultarUsuario($_REQUEST['usLogin']);
 		<title>Centro Medico</title> 
 	</head>
 	<body><br>
+		<h2 class="text-center">Actualizar Usaurio</h2>
 		<FORM action= "/CentroMedico/Controlador/Validacion_Actualizar_Usuarios.php" method="post" class="form-horizontal">
-			<P><h3><b>Datos personales</b></center><br><br></h3>
+			<P><h3><b>Datos personales</b><br><br></h3>
 			<h4><div class="form-group">
 				<label class="control-label col-md-2"> Rol: </label>
 				<div class="col-md-10">
