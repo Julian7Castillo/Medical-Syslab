@@ -39,6 +39,16 @@ footer{
     margin: 0px 0px 0px 0px;
 }
 
+/*utilidades*/
+.text-center{
+    text-align: center;
+}
+
+.center-div{
+    display: flex;
+    justify-content: center;
+}
+
 .btn-custom{
     position:unset;
     /*top: auto;*/

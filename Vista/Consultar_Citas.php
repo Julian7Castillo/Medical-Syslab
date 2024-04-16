@@ -12,9 +12,9 @@
 	<body>
 		<!--questionario para ingresar nuevos medicos en la  pagina-->
 		<article class="col-xs-12">
-			<center><h1>Consultar Citas</h1><br><br>
+			<h2 class="text-center">Consultar Cita</h2><br><br>
 			<FORM action= "" method="post" class="form-horizontal">
-				<P><h3><b>Digite el Documento de Indentidad del Paciente a Consultar</b></center><br><br></h3><h4>
+				<P><h3><b>Digite el Documento de Indentidad del Paciente a Consultar</b><br><br></h3><h4>
 				<div class="form-group">
 					<label class="control-label col-md-2"> Identificación de usuario: </label>
 					<div class="col-md-10">

@@ -5,39 +5,36 @@
     	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     	<meta name="viewport" content="width=device-width, initial-scale=1">
     	<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css">
 		<title>Centro Medico</title>
-
-		<!--estilos css edicionales personalizados-->
-		<style type="text/css">
-			a:link{
-				color: blue;
-			}
-			header{
-				background:#2c3e5a;
-				color:#fff;
-			}
-			nav{
-				background:black;
-				color:#fff;
-			}
-			aside{
-				background: #c0392b;
-				color: #fff;
-			}
-			footer{
-				background: #2c3e5a;
-				color: #fff;
-			}
-		</style>
 	</head>
 
 	<body>
 		<!--questionario para ingresar nuevos medicos en la  pagina-->
 		<article class="col-xs-12">
-			<center><h2>Registro de Usuarios</h2>
+			<h2 class="text-center">Registro de Usuarios</h2>
 			<FORM action= "/CentroMedico/Controlador/Validacion_Insertar_Usuario.php" method="post" class="form-horizontal">
-				<P><h3><b>Datos personales</b></center><br><br></h3>
-				<h4><div class="form-group">
+				<P><h3><b>Datos personales</b></h3><br><br>
+				<h4>
+				<div class="form-group">
+					<label class="control-label col-md-2"> Identificación: </label>
+					<div class="col-md-10">
+						<INPUT class="form-control" type="text" name="identificacion" placeholder="CC">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label col-md-2"> Nombre: </label>
+					<div class="col-md-10">
+						<INPUT class="form-control" type="text" name="nombreUsuario" placeholder="Nombre">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label col-md-2"> Apellido: </label>
+					<div class="col-md-10">
+						<INPUT class="form-control" type="text" name="nombreUsuario" placeholder="Nombre">
+					</div>
+				</div>
+				<div class="form-group">
 					<label class="control-label col-md-2"> Rol: </label>
 					<div class="col-md-10">
 						<select class="form-control" name="rol" id="rol">
@@ -45,29 +42,43 @@
 					        <option value="Administrador">Administrador</option>
 					        <option value="Medico">Medico</option>
 					        <option value="Paciente">Paciente</option>
-					     </select><br><br>
+					     </select>
 					</div>
-				</div><br><br>
+				</div>
 				<div class="form-group">
-					<label class="control-label col-md-2"> Identificación: </label>
+					<label class="control-label col-md-2"> Fecha de Nacimiento: </label>
 					<div class="col-md-10">
-						<INPUT class="form-control" type="text" name="identificacion" placeholder="CC"><br><br>
+						<INPUT class="form-control" type="text" name="nombreUsuario" placeholder="Nombre">
 					</div>
-				</div><br><br>
+				</div>
 				<div class="form-group">
-					<label class="control-label col-md-2"> Nombre: </label>
+					<label class="control-label col-md-2"> Sexo: </label>
 					<div class="col-md-10">
-						<INPUT class="form-control" type="text" name="nombreUsuario" placeholder="Nombre"><br><br>
+						<INPUT class="form-control" type="text" name="nombreUsuario" placeholder="Nombre">
 					</div>
-				</div><br><br>
+				</div>
+				<h3><b>Datos de Contacto</b><br><br>
+				<div class="form-group">
+					<label class="control-label col-md-2"> Correo: </label>
+					<div class="col-md-10">
+						<INPUT class="form-control" type="text" name="nombreUsuario" placeholder="Nombre">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label col-md-2">Telefono: </label>
+					<div class="col-md-10">
+						<INPUT class="form-control" type="text" name="nombreUsuario" placeholder="Nombre">
+					</div>
+				</div>
 				<div class="form-group">
 					<label class="control-label col-md-2"> Contraseña: </label>
 					<div class="col-md-10">
-						<INPUT class="form-control" type="password" name="password" placeholder="Contraseña"><br><br>
-					</div><br><br>
+						<INPUT class="form-control" type="password" name="password" placeholder="Contraseña">
+					</div>
 				</div>
-				<center><button class="btn btn-primary btn-lg" type="submit">Enviar Datos</button>
-				<button class="btn btn-primary btn-lg"type="reset">Limpiar Formulario</button></P></center></p><br><br></h4>
+				<center>
+					<button class="btn btn-primary btn-lg" type="submit">Cambiar datos Datos</button>
+				</center></p></h4>
 			</FORM>
 		</article>
 	</body>

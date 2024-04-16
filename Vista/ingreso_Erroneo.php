@@ -11,7 +11,7 @@
 
 	<body>
 		<article class="resultOperation">
-			<b><h1> La operación NO ha sido exitosa </h1></b>
+			<b><h2 class="text-center"> La operación NO ha sido exitosa </h2></b>
 		</article>
 	</body>
 <html>

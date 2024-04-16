@@ -20,8 +20,9 @@ $resultado=$objConsultorio->ConsultarConsultorio($_REQUEST['idConsultorio']);
 		<title>Centro Medico</title> 
 	</head>
 	<body><br>
+		<h2 class="text-center">Eliminar Consultorio</h2>
 		<FORM action= "/CentroMedico/Controlador/Validacion_Borrar_Consultorio.php" method="post" class="form-horizontal">
-			<P><h3><b> Datos </b></center><br><br></h3>
+			<P><h3><b> Datos </b><br><br></h3>
 			<h4>
 			</div><br><br>
 			<div class="form-group">

@@ -11,7 +11,7 @@
 
 	<body>
 		<article class="resultOperation">
-			<b><h1> Listado de Consultorios </h1></b>
+			<b><h2 class="text-center"> Listado de Consultorios </h2></b>
 		</article>
 	</body>
 <html>

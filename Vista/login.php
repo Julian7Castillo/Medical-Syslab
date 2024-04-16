@@ -16,18 +16,17 @@
 	<body>
 		<!--contenido del formulario del login-->
 		<div class="container">
-			<section class="main row">
+			<section class="main row center-di" >
 				<article class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
-					<form action="controlador/validacionIniciosesion.php" mothod="post">
-						<p><center><h2>Bienvenido a nuestro centro medico virtual por favor inicie sesion</h2><br><br>
+					<form action="controlador/LoginController.php" mothod="post">
+						<p><h2 class="text-center">Bienvenido a nuestro centro medico virtual por favor inicie sesion</h2><br><br>
 						<h3>Usuario: <br>
 						<INPUT type="text" name="usuario"><br><br>
 						Contraseña: <br>
 						<INPUT type="password" name ="psw"><br><br>
-						<button class="btn btn-primary btn-lg" type="submit" >Iniciar sesion</button></h3></center>
+						<button class="btn btn-primary btn-lg" type="submit" >Iniciar sesion</button></h3>
 					</p><br><br><br><br></form>
 				</article>
-
 				<aside class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
 					<p>
 						<h2>Gracias por visitar nuestra sitio web esperamos tengas una gran atención con nuestros servicios y accesibilidad, siempre buscamos lo mejor para nuestros usuarios no olvides dejarnos tus opiniones.<h2><br> 
