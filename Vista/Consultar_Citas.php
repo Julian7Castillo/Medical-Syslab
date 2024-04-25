@@ -21,57 +21,57 @@
 						<INPUT class="form-control" type="text" name="usuario" placeholder="CC"><br><br>
 					</div>
 				</div><br><br>
-				<center><button class="btn btn-primary btn-lg" type="submit">Buscar</button>
-				</P></center></p><br><br></h4>
+				<div class="center-div">
+					<button class="btn btn-primary btn-lg" type="submit">Buscar</button>
+				</div></p><br><br></h4>
 			</FORM>
 
-		<?php
-		require "./Modelo/conecta.php";
-		require "./Modelo/ClaseCita.php";
-		if (isset($_POST['usuario'])) {
-			$objCita = new Cita();
-			$resultado=$objCita->ConsultarCita($_POST['usuario']);
-		if (isset($resultado))  
-		{ if($resultado->num_rows >0 ){?>
-		    
-		  <h2>DATOS DE LAS CITAS</h2><br><br>
-		 <table class="table table-hover text-center mt-3">
-		  <thead>
-		        <th class="text-center"> N </th>
-		        <th class="text-center"> Fecha </th>
-		        <th class="text-center"> Hora </th>
-		        <th class="text-center"> Paciente </th>
-		        <th class="text-center"> Medico </th>
-		        <th class="text-center"> Consultorio </th>
-		        <th class="text-center"> Estado </th>
-		        <th class="text-center"> Observaciones </th>
-		      </thead>
-		 <?php
-			while($registro=$resultado->fetch_object())
-			{
+			<?php
+			require "./Modelo/conecta.php";
+			require "./Modelo/ClaseCita.php";
+			if (isset($_POST['usuario'])) {
+				$objCita = new Cita();
+				$resultado=$objCita->ConsultarCita($_POST['usuario']);
+			if (isset($resultado))  
+			{ if($resultado->num_rows >0 ){?>
+				
+			<h2>DATOS DE LAS CITAS</h2><br><br>
+			<table class="table table-hover text-center mt-3">
+			<thead>
+					<th class="text-center"> N </th>
+					<th class="text-center"> Fecha </th>
+					<th class="text-center"> Hora </th>
+					<th class="text-center"> Paciente </th>
+					<th class="text-center"> Medico </th>
+					<th class="text-center"> Consultorio </th>
+					<th class="text-center"> Estado </th>
+					<th class="text-center"> Observaciones </th>
+				</thead>
+			<?php
+				while($registro=$resultado->fetch_object()){
 			?>
-			  <tr>
-			    <td><?php echo $registro->idCita?></td>
-			    <td><?php echo $registro->citFecha?></td>
-			    <td><?php echo $registro->citHora?></td>
-			    <td><?php echo $registro->citPaciente?></td>
-			    <td><?php echo $registro->citMedico?></td>
-			    <td><?php echo $registro->citConsultorio?></td>
-			    <td><?php echo $registro->citEsado?></td>
-			    <td><?php echo $registro->citObservaciones?></td>
-			  </tr>  
-			 <?php
-			}  //cerrando el ciclo while
-		?>
-		</table>
-		<?php 
-			}else{  
-				echo '<div class="alert alert-danger text-center">No hay Medicos en la base de datos</div>';
+			<tr>
+				<td><?php echo $registro->idCita?></td>
+				<td><?php echo $registro->citFecha?></td>
+				<td><?php echo $registro->citHora?></td>
+				<td><?php echo $registro->citPaciente?></td>
+				<td><?php echo $registro->citMedico?></td>
+				<td><?php echo $registro->citConsultorio?></td>
+				<td><?php echo $registro->citEsado?></td>
+				<td><?php echo $registro->citObservaciones?></td>
+			</tr>  
+			<?php
+				}  //cerrando el ciclo while
+			?>
+			</table>
+			<?php 
+				}else{  
+					echo '<div class="alert alert-danger text-center">No hay Medicos en la base de datos</div>';
+				}
 			}
 		}
-	}
-		?>
-		<br><br>
+			?>
+			<br><br>
 		</article>
 	</body>
 <html>

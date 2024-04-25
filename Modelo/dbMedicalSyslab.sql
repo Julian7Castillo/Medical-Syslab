@@ -18,7 +18,7 @@ CREATE TABLE usuarios
     susTelefono CHAR(15) NOT NULL,
     Especialidad VARCHAR(100),
     usuPassword VARCHAR(60) NOT NULL,
-    usuEstado ENUM('Activo','Inactivo', 'Bloqueado'));
+    usuEstado ENUM('Activo','Inactivo', 'Bloqueado') NOT NULL);
 
 CREATE TABLE consultorios
     (idConsultorio INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -100,13 +100,45 @@ CALL inscit(20230623,'14:00:00',31782646,926371534,2);
 CALL inscit(20230816,'16:15:00',10274836,28461832,4);
 CALL inscit(20231001,'18:30:00',27345892,62836173,3);
 
-#crear hasta aquí por qeu el resto no funciona
 #actualizacion
-#UPDATE usuarios SET usuRol='$rol', usunom='$nombre',usuPassword ='$password', usuEstado='$estado' 
-#WHERE usLogin ='$identificacion';
+#elemplo: UPDATE usuarios SET usuRol='2', usuNombre='SEBASTIAN', usuApellidos='HERRERA', usuFechaNacimiento='20001026', usuSexo='Masculino', usuCorreo='SEBA@GMSIL.COM', susTelefono='3112456789', Especialidad='cardiologia Clinica',usuPassword ='123456', usuEstado='Activo' WHERE usucc ='10263846';
 
-CREATE PROCEDURE upusu(usur INT, usLo CHAR(15), usun VARCHAR(30), usuP VARCHAR(60), usuEs ENUM('Activo','Inactivo'))
-UPDATE usuarios SET usuRol=usur, usunom=usun, usuPassword=usuP , usuEstado=usuEs
-WHERE usLogin = usLo;
+CREATE PROCEDURE upusu(cc BIGINT, rol INT, nombre VARCHAR(30), apellidos VARCHAR(50), fechaNacimiento DATE, sexo ENUM('Femenino','Masculino'), correo VARCHAR(50), telefono CHAR(15), especialidad VARCHAR(100), passw VARCHAR(60), estado ENUM('Activo','Inactivo', 'Bloqueado')) UPDATE usuarios SET usucc=cc, usuRol=rol, usuNombre=nombre, usuApellidos=apellidos, usuFechaNacimiento=fechaNacimiento, usuSexo=sexo, usuCorreo=correo, susTelefono=telefono, Especialidad=especialidad, usuPassword=passw, usuEstado=estado WHERE usucc = cc;
 
-CALL upusu(1,1002523892,'David','169','Activo');
+CALL upusu(10263846,2,'Sebastian', 'Herrera', 20001026, 'Masculino', 'sebastian@gmail.com','3112456789', 'Cardiologia', '09876','Activo');
+
+CREATE PROCEDURE upuCom(id INT, nombre CHAR(15)) UPDATE consultorios SET conNombre=nombre WHERE idConsultorio = id;
+
+#CALL upuCom(4,'CONSULTORIO-103');
+
+CREATE PROCEDURE upuCit(id INT, nombre CHAR(15)) UPDATE consultorios SET conNombre=nombre WHERE idConsultorio = id;
+
+CALL upuCit(4,'CONSULTORIO-103');
+
+#Eliminacion consultar como no alterar si son llaves foraneas
+#elemplo:DELETE FROM usuarios WHERE usucc = 10263846;
+
+CREATE PROCEDURE delusu(cc Int) DELETE FROM usuarios WHERE usucc = cc;
+
+#CALL delusu(10263846);
+
+CREATE PROCEDURE delCon(id Int) DELETE FROM consultorios WHERE idConsultorio = id;
+
+#CALL delCon(3);
+
+CREATE PROCEDURE delCit(id Int) DELETE FROM citas WHERE idCita = id;
+
+#CALL delCit(4);
+
+#Vistas
+CREATE VIEW listUsu AS SELECT * FROM usuarios;
+
+SELECT * FROM listUsu;
+
+CREATE VIEW listCons AS SELECT * FROM consultorios;
+
+SELECT * FROM listCons;
+
+CREATE VIEW listCit AS SELECT * FROM citas;
+
+SELECT * FROM listCit;
