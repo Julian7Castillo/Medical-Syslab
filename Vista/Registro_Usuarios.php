@@ -13,7 +13,7 @@
 		<!--questionario para ingresar nuevos medicos en la  pagina-->
 		<article class="col-xs-12">
 			<h2 class="text-center">Registro de Usuarios</h2>
-			<FORM action= "/CentroMedico/Controlador/Validacion_Insertar_Usuario.php" method="post" class="form-horizontal">
+			<FORM action= "/CentroMedico/Controlador/UsuarioController.php" method="post" class="form-horizontal">
 				<P><h3><b>Datos personales</b></h3><br><br>
 				<h4>
 				<div class="form-group">
@@ -76,9 +76,9 @@
 						<INPUT class="form-control" type="password" name="password" placeholder="Contraseña">
 					</div>
 				</div>
-				<center>
-					<button class="btn btn-primary btn-lg" type="submit">Cambiar datos Datos</button>
-				</center></p></h4>
+				<div class="center-div">
+					<button class="btn btn-primary btn-lg" type="submit">Crear Usuario</button>
+				</div></p></h4>
 			</FORM>
 		</article>
 	</body>

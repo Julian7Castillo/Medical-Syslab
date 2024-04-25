@@ -16,7 +16,7 @@
 
 	}
 
-	$objUsuario=New Usuario();
+	$objUsuario = New Usuario();
 	$objUsuario->crearUsuario($_POST['rol'], $_POST['identificacion'], $_POST['nombreUsuario'], $_POST['password'], 'Activo');
 	$resultado=$objUsuario->agregarUsuario();
 	
