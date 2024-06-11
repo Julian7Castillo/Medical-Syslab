@@ -10,8 +10,36 @@
 	</head>
 
 	<body>
-		<article class="resultOperation">
-			<b><h2 class="text-center"> Listado de Consultorios </h2></b>
+		<article class="col-xs-12">
+			<b><h2 class="text-center"> LISTADO DE CONSULTORIOS </h2></b>
+			<?php
+				require "./Modelo/conecta.php";
+				require './Modelo/ClaseConsultorio.php';
+				$consultorio = new Consultorio();
+				$resultado = $consultorio->ListarConsultorios();
+				if (isset($resultado)) {
+					if($resultado->num_rows >0 ){
+						echo	'<h1>Datos de consultorios</h1>
+								<table class="table table-hover text-center mt-3">
+									<thead>
+										<th class="text-center">Identificacion.</th>
+										<th class="text-center">Consultorio</th>
+									</thead>
+									<tbody>';
+						while($registro=$resultado->fetch_object()){
+							echo '<tr>';
+							echo '<td>' . htmlspecialchars($registro->idConsultorio) . '</td>';
+							echo '<td>' . htmlspecialchars($registro->conNombre) . '</td>';
+							echo '</tr>';
+						}
+						echo '</tbody></table>';
+					}else{  
+						echo '<div class="alert alert-danger text-center">El Usuario No existe en la base de datos</div>';
+					}
+				}else {
+					echo '<div class="alert alert-danger text-center">Error en la consulta</div>';
+				}
+				?>
 		</article>
 	</body>
 <html>

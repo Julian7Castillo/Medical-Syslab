@@ -1,7 +1,7 @@
 <?php
 	//Insertar
-	require"../Modelo/Conecta.php";
-	require"../Modelo/ClaseCita.php";
+	require "../Modelo/Conecta.php";
+	require "../Modelo/ClaseCita.php";
 
 	$fecha =($_POST['fecha']);
 	$hora = ($_POST['hora']);
