@@ -87,7 +87,7 @@
 				};
 			?>
 
-			<button style=background-color:white type="button" class="btn btn-primary btn-lg dropdown-toggle btn-ajus" ><a href="index.php?pag=login">&nbsp; Cerrar sesion </a></button></center>
+			<button style=background-color:white type="button" class="btn btn-primary btn-lg dropdown-toggle btn-ajus" ><a href="./Controlador/Logout.php">&nbsp; Cerrar sesion </a></button></center>
 
 		</nav><br>
 	</body>

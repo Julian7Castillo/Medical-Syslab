@@ -13,7 +13,7 @@
 		<!--questionario para ingresar nuevos medicos en la  pagina-->
 		<article class="col-xs-12">
 			<h2 class="text-center">Registro de Usuarios</h2>
-			<FORM action= "/CentroMedico/Controlador/UsuarioController.php" method="post" class="form-horizontal">
+			<FORM action= "Controlador/UsuarioController.php?op=crearUsuario" method="post" class="form-horizontal">
 				<P><h3><b>Datos personales</b></h3><br><br>
 				<h4>
 				<div class="form-group">
@@ -25,13 +25,13 @@
 				<div class="form-group">
 					<label class="control-label col-md-2"> Nombre: </label>
 					<div class="col-md-10">
-						<INPUT class="form-control" type="text" name="nombreUsuario" placeholder="Nombre">
+						<INPUT class="form-control" type="text" name="ApellidoUsuario" placeholder="Nombre">
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="control-label col-md-2"> Apellido: </label>
 					<div class="col-md-10">
-						<INPUT class="form-control" type="text" name="nombreUsuario" placeholder="Nombre">
+						<INPUT class="form-control" type="text" name="nombreUsuario" placeholder="Apellido">
 					</div>
 				</div>
 				<div class="form-group">
@@ -48,26 +48,30 @@
 				<div class="form-group">
 					<label class="control-label col-md-2"> Fecha de Nacimiento: </label>
 					<div class="col-md-10">
-						<INPUT class="form-control" type="text" name="nombreUsuario" placeholder="Nombre">
+						<INPUT class="form-control" type="date" name="Fecha" placeholder="Fecha de nacimiento">
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="control-label col-md-2"> Sexo: </label>
 					<div class="col-md-10">
-						<INPUT class="form-control" type="text" name="nombreUsuario" placeholder="Nombre">
+						<select class="form-control" name="Sexo" id="Sexo">
+							<option value="Administrador">Seleccionar</option>
+					        <option value="Administrador">Masculino</option>
+					        <option value="Medico">Femenino</option>
+					     </select>
 					</div>
 				</div>
 				<h3><b>Datos de Contacto</b><br><br>
 				<div class="form-group">
 					<label class="control-label col-md-2"> Correo: </label>
 					<div class="col-md-10">
-						<INPUT class="form-control" type="text" name="nombreUsuario" placeholder="Nombre">
+						<INPUT class="form-control" type="email" name="email" placeholder="Email">
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="control-label col-md-2">Telefono: </label>
 					<div class="col-md-10">
-						<INPUT class="form-control" type="text" name="nombreUsuario" placeholder="Nombre">
+						<INPUT class="form-control" type="phone" name="telefono" placeholder="Telefono">
 					</div>
 				</div>
 				<div class="form-group">

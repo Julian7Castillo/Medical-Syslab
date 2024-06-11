@@ -13,7 +13,7 @@
 		<!--questionario para ingresar nuevos medicos en la  pagina-->
 		<article class="col-xs-12">
 			<h2 class="text-center">Consultar Usuario</h2>
-			<FORM action= "" method="post" class="form-horizontal">
+			<FORM action= "./Controlador/UsuarioController.php?op=ConsultarUsuario" method="post" class="form-horizontal">
 				<P><h3><b>Digite el Documento de Indentidad del Usuario a Consultar</b><br><br></h3><h4>
 				<div class="form-group">
 					<label class="control-label col-md-2"> Identificación de usuario: </label>
@@ -23,48 +23,7 @@
 				</div><br><br>
 				<center><button class="btn btn-primary btn-lg" type="submit">Buscar</button>
 				</P></center></p><br><br></h4>
-			</FORM>
+			</FORM>	
 		</article>
-		
-		<?php
-		extract ($_POST); 
-		require "./Modelo/conecta.php";
-		require "./Modelo/ClaseUsuario.php";
-
-		if (isset($_POST['usuario'])) {
-			$objUsuario= new Usuario();
-			$resultado=$objUsuario->ConsultarUsuario($_POST['usuario']);
-		if (isset($resultado))  
-		{ if($resultado->num_rows >0 ){?>
-		    
-		  <h1 align="center">DATOS DEL USUARIO</h1>
-		 <table class="table table-hover text-center mt-3">
-		  <thead>
-		        <th class="text-center">Usuario.</th>
-		        <th class="text-center">Password</th>
-		        <th class="text-center">Estado</th>
-		        <th class="text-center">Rol</th>
-		        
-		      </thead>
-		 <?php
-			while($registro=$resultado->fetch_object())
-			{
-			?>
-			  <tr>
-			    <td><?php echo $registro->usLogin?></td>
-			    <td><?php echo $registro->usuPassword?></td>
-			    <td><?php echo $registro->usuEstado?></td>
-			    <td><?php echo $registro->nombre_rol?></td>
-			  </tr>  
-			 <?php
-			}  //cerrando el ciclo while
-		?>
-		</table>
-		<?php 
-			}else{  
-				echo '<div class="alert alert-danger text-center">El Usuario No existe en la base de datos</div>';}
-			}
-		}
-		?>
 	</body>
 <html>
