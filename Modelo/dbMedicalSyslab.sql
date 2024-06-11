@@ -15,7 +15,7 @@ CREATE TABLE usuarios
     usuFechaNacimiento DATE NOT NULL,
     usuSexo ENUM('Femenino','Masculino') NOT NULL,
     usuCorreo VARCHAR(50) NOT NULL,
-    susTelefono CHAR(15) NOT NULL,
+    usuTelefono CHAR(15) NOT NULL,
     Especialidad VARCHAR(100),
     usuPassword VARCHAR(60) NOT NULL,
     usuEstado ENUM('Activo','Inactivo', 'Bloqueado') NOT NULL);
@@ -31,7 +31,7 @@ CREATE TABLE citas
     citPaciente BIGINT NOT NULL,
     citMedico BIGINT NOT NULL,
     citConsultorio INT(11) NOT NULL,
-    citEsado ENUM('Asignado','Atendido') NOT NULL,
+    citEstado ENUM('Asignado','Atendido') NOT NULL,
     citObservaciones TEXT);
 
 #llaves foraneas

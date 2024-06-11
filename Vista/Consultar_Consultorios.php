@@ -18,7 +18,7 @@
 				<div class="form-group">
 					<label class="control-label col-md-2"> Identificación de usuario: </label>
 					<div class="col-md-10">
-						<INPUT class="form-control" type="text" name="usuario" placeholder="CC"><br><br>
+						<INPUT class="form-control" type="text" name="id" placeholder="CC"><br><br>
 					</div>
 				</div><br><br>
 				<center><button class="btn btn-primary btn-lg" type="submit">Buscar</button>
@@ -28,28 +28,28 @@
 		<?php
 		require "./Modelo/conecta.php";
 		require "./Modelo/ClaseConsultorio.php";
-		if (isset($_POST['usuario'])) {
+		if (isset($_POST['id'])) {
 			$objConsultorio= new Consultorio();
-			$resultado=$objConsultorio->ConsultarConsultorio($_POST['usuario']);
-		if (isset($resultado))  
-		{ if($resultado->num_rows >0 ){?>
+			$resultado=$objConsultorio->ConsultarConsultorio($_POST['id']);
+			if (isset($resultado)) { 
+				if($resultado->num_rows >0 ){
+		?>
 		    
-		  <h2>DATOS DE LOS CONSULTORIOS</h2><br><br>
-		 <table class="table table-hover text-center mt-3">
-		  <thead>
-		        <th class="text-center"> N </th>
-		        <th class="text-center"> Nombre </th>
-		      </thead>
-		 <?php
-			while($registro=$resultado->fetch_object())
-			{
-			?>
-			  <tr>
-			    <td><?php echo $registro->idConsultorio?></td>
-			    <td><?php echo $registro->conNombre?></td>
-			  </tr>  
-			 <?php
-			}  //cerrando el ciclo while
+		 	<h2>DATOS DE LOS CONSULTORIOS</h2><br><br>
+		 	<table class="table table-hover text-center mt-3">
+		  		<thead>
+					<th class="text-center"> N </th>
+					<th class="text-center"> Nombre </th>
+				</thead>
+		<?php
+				while($registro=$resultado->fetch_object()){
+		?>
+				<tr>
+					<td><?php echo $registro->idConsultorio?></td>
+					<td><?php echo $registro->conNombre?></td>
+				</tr>  
+				<?php
+				}  //cerrando el ciclo while
 		?>
 		</table>
 		<?php 

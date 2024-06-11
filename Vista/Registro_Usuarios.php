@@ -19,25 +19,25 @@
 				<div class="form-group">
 					<label class="control-label col-md-2"> Identificación: </label>
 					<div class="col-md-10">
-						<INPUT class="form-control" type="text" name="identificacion" placeholder="CC">
+						<INPUT class="form-control" type="text" name="identificacion" placeholder="CC" require="">
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="control-label col-md-2"> Nombre: </label>
 					<div class="col-md-10">
-						<INPUT class="form-control" type="text" name="ApellidoUsuario" placeholder="Nombre">
+						<INPUT class="form-control" type="text" name="ApellidoUsuario" placeholder="Nombre" require="">
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="control-label col-md-2"> Apellido: </label>
 					<div class="col-md-10">
-						<INPUT class="form-control" type="text" name="nombreUsuario" placeholder="Apellido">
+						<INPUT class="form-control" type="text" name="nombreUsuario" placeholder="Apellido" require="">
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="control-label col-md-2"> Rol: </label>
 					<div class="col-md-10">
-						<select class="form-control" name="rol" id="rol">
+						<select class="form-control" name="rol" id="rol" require="">
 							<option value="Administrador">Seleccionar</option>
 					        <option value="Administrador">Administrador</option>
 					        <option value="Medico">Medico</option>
@@ -48,13 +48,13 @@
 				<div class="form-group">
 					<label class="control-label col-md-2"> Fecha de Nacimiento: </label>
 					<div class="col-md-10">
-						<INPUT class="form-control" type="date" name="Fecha" placeholder="Fecha de nacimiento">
+						<INPUT class="form-control" type="date" name="Fecha" placeholder="Fecha de nacimiento" require="">
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="control-label col-md-2"> Sexo: </label>
 					<div class="col-md-10">
-						<select class="form-control" name="Sexo" id="Sexo">
+						<select class="form-control" name="Sexo" id="Sexo" require="">
 							<option value="Administrador">Seleccionar</option>
 					        <option value="Administrador">Masculino</option>
 					        <option value="Medico">Femenino</option>
@@ -65,19 +65,19 @@
 				<div class="form-group">
 					<label class="control-label col-md-2"> Correo: </label>
 					<div class="col-md-10">
-						<INPUT class="form-control" type="email" name="email" placeholder="Email">
+						<INPUT class="form-control" type="email" name="email" placeholder="Email" require="">
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="control-label col-md-2">Telefono: </label>
 					<div class="col-md-10">
-						<INPUT class="form-control" type="phone" name="telefono" placeholder="Telefono">
+						<INPUT class="form-control" type="phone" name="telefono" placeholder="Telefono" require="" >
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="control-label col-md-2"> Contraseña: </label>
 					<div class="col-md-10">
-						<INPUT class="form-control" type="password" name="password" placeholder="Contraseña">
+						<INPUT class="form-control" type="password" name="password" placeholder="Contraseña" min="12" require="">
 					</div>
 				</div>
 				<div class="center-div">

@@ -1,7 +1,7 @@
 <?php
 	//Insertar
 	include("./Modelo/conecta.php");
-	require"./Modelo/ClaseConsultorio.php";
+	require "./Modelo/ClaseConsultorio.php";
 
 	//guarda los datos en la base de datos 
 	$objConsultorio=New Consultorio();
@@ -22,7 +22,7 @@
 	//actualizar
 	//llama a la conexion con la base de datos
 	include("./Modelo/conecta.php");
-	require"./Modelo/ClaseConsultorio.php";
+	require "./Modelo/ClaseConsultorio.php";
 
 	//guarda los datos en la base de datos 
 	$objConsultorio=New Consultorio();
@@ -41,7 +41,7 @@
 
 	//llama a la conexion con la base de datos
 	include("../Modelo/conecta.php");
-	require"../Modelo/ClaseConsultorio.php";
+	require "../Modelo/ClaseConsultorio.php";
 
 	//guarda los datos en la base de datos 
 	$objConsultorio=New Consultorio();

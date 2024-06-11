@@ -31,7 +31,7 @@
 			$this->Conexion->close();
 			return $resultado;	
 		}
-		public function ConsultarConsultoriosg(){
+		public function ListarConsultorios(){
 			$this->Conexion=Conectarse();
 			$sql="SELECT * FROM consultorios";
 			$resultado=$this->Conexion->query($sql);

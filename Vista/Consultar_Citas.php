@@ -16,7 +16,7 @@
 			<FORM action= "" method="post" class="form-horizontal">
 				<P><h3><b>Digite el Documento de Indentidad del Paciente a Consultar</b><br><br></h3><h4>
 				<div class="form-group">
-					<label class="control-label col-md-2"> Identificación de usuario: </label>
+					<label class="control-label col-md-2"> Codigo de Cita: </label>
 					<div class="col-md-10">
 						<INPUT class="form-control" type="text" name="usuario" placeholder="CC"><br><br>
 					</div>
