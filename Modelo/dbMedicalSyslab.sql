@@ -103,7 +103,9 @@ CALL inscit(20231001,'18:30:00',27345892,62836173,3);
 #actualizacion
 #elemplo: UPDATE usuarios SET usuRol='2', usuNombre='SEBASTIAN', usuApellidos='HERRERA', usuFechaNacimiento='20001026', usuSexo='Masculino', usuCorreo='SEBA@GMSIL.COM', susTelefono='3112456789', Especialidad='cardiologia Clinica',usuPassword ='123456', usuEstado='Activo' WHERE usucc ='10263846';
 
-CREATE PROCEDURE upusu(cc BIGINT, rol INT, nombre VARCHAR(30), apellidos VARCHAR(50), fechaNacimiento DATE, sexo ENUM('Femenino','Masculino'), correo VARCHAR(50), telefono CHAR(15), especialidad VARCHAR(100), passw VARCHAR(60), estado ENUM('Activo','Inactivo', 'Bloqueado')) UPDATE usuarios SET usucc=cc, usuRol=rol, usuNombre=nombre, usuApellidos=apellidos, usuFechaNacimiento=fechaNacimiento, usuSexo=sexo, usuCorreo=correo, susTelefono=telefono, Especialidad=especialidad, usuPassword=passw, usuEstado=estado WHERE usucc = cc;
+CREATE PROCEDURE upusu(cc BIGINT, rol INT, nombre VARCHAR(30), apellidos VARCHAR(50), fechaNacimiento DATE, sexo ENUM('Femenino','Masculino'), correo VARCHAR(50), telefono CHAR(15), especialidad VARCHAR(100), passw VARCHAR(60), estado ENUM('Activo','Inactivo', 'Bloqueado')) 
+UPDATE usuarios SET usucc=cc, usuRol=rol, usuNombre=nombre, usuApellidos=apellidos, usuFechaNacimiento=fechaNacimiento, usuSexo=sexo, usuCorreo=correo, susTelefono=telefono, Especialidad=especialidad, usuPassword=passw, usuEstado=estado 
+WHERE usucc = cc;
 
 CALL upusu(10263846,2,'Sebastian', 'Herrera', 20001026, 'Masculino', 'sebastian@gmail.com','3112456789', 'Cardiologia', '09876','Activo');
 

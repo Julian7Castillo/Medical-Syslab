@@ -16,7 +16,8 @@
 	if ($existe==1)  
 	{
 		$usuario=$resultado->fetch_object() or die ("Error");
-		$_SESSION['user']= $usuario->usucc;
+		$_SESSION['user']= $usuario->usuNombre;
+		$_SESSION['cc']= $usuario->usucc;
 		$_SESSION['rol']= $usuario->usuRol;
 		header("location:../index.php?pag=bienvenida");
 	}

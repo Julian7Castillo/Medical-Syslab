@@ -12,7 +12,8 @@
                 <?php  
                     if($pag != 'login'){
                 ?>
-                <h7>Usuario: <?php echo$_SESSION['user']; ?><br> Rol: 
+                <h7>Usuario: <?php echo$_SESSION['user']; ?><br>
+                Rol: 
                 <?php 
                     if($_SESSION['rol'] == 1){
                         echo 'Administrador'; 
