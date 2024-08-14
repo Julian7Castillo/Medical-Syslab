@@ -12,7 +12,7 @@
 	<body>
 		<!--questionario para ingresar nuevos medicos en la  pagina-->
 		<article class="col-xs-12">
-			<h2 class="text-center">Registro de Usuarios</h2>
+			<h2 class="text-center">REGISTRO DE USUARIOS</h2>
 			<FORM action= "Controlador/UsuarioController.php?op=crearUsuario" method="post" class="form-horizontal">
 				<P><h3><b>Datos personales</b></h3><br><br>
 				<h4>

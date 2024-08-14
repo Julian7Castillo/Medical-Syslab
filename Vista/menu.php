@@ -5,16 +5,16 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="css/styles.css">
 		<title>menu</title>
-	</head>
+	</head> 
 	<body>
-		<nav class="col-xs-12 containers btn-group">
+		<nav class="col-xs-12 containers btn-group menu-centrado">
 
-			<center><button style=background-color:white type="button" class="btn btn-primary btn-lg dropdown-toggle btn-ajus"><a href="index.php?pag=bienvenida">&nbsp; Inicio </a></button>
-			<button style=background-color:white type="button" class="btn btn-primary btn-lg dropdown-toggle btn-ajus"><a href="index.php?pag=perfil">&nbsp; Perfil </a></button>
+			<div class="center-div">
 
 			<?php
+			
 				if($_SESSION['rol'] == 1){
-					echo '
+					?>
 					<div class="btn-group">
 						<div class="dropdown">
 							<button type="button" class="btn btn-primary btn-lg dropdown-toggle btn-ajus" data-toggle="dropdown"> Usuarios <span class="caret"></span></button>
@@ -50,9 +50,10 @@
 								<li><a href="index.php?pag=Consultar_Citas">Consultar Citas</a></li>
 							</ul>
 						</div>
-					</div>';
+					</div>
+					<?php
 				}if($_SESSION['rol'] == 2){
-					echo '
+					?>
 					<div class="btn-group">
 						<div class="dropdown">
 							<button type="button" class="btn btn-primary btn-lg dropdown-toggle btn-ajus" data-toggle="dropdown"> Consultorios <span class="caret"></span></button>
@@ -71,9 +72,10 @@
 								<li><a href="inicio.php?pag=Actualizar_Citas">Actualizar Citas</a></li>
 							</ul></button>
 						</div>
-					</div>';
+					</div>
+					<?php
 				}if($_SESSION['rol'] == 3){
-					echo '
+					?>
 					<div class="btn-group">
 						<div class="dropdown">
 							<button type="button" class="btn btn-primary btn-lg dropdown-toggle btn-ajus" data-toggle="dropdown"> Citas <span class="caret"></span></button>
@@ -83,12 +85,13 @@
 								<li><a href="inicio.php?pag=Consultae_Citas">Consultar Citas</a></li>
 							</ul>
 						</div>
-					</div>';
+					</div>
+					<?php
 				};
 			?>
 
-			<button style=background-color:white type="button" class="btn btn-primary btn-lg dropdown-toggle btn-ajus" ><a href="./Controlador/Logout.php">&nbsp; Cerrar sesion </a></button></center>
-
+			<button style=background-color:white type="button" class="btn btn-primary btn-lg dropdown-toggle btn-ajus" ><a href="./Controlador/Logout.php">&nbsp; Cerrar sesion </a></button>
+			</div>
 		</nav><br>
 	</body>
 </html>

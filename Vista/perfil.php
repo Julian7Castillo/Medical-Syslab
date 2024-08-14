@@ -9,71 +9,83 @@
 		<title>Centro Medico</title>
 	</head>
 	<body>
-		<main>
-			<b><h1 class="text-center"> Perfil de Usuario </h1></b>
+		<main class="col-xs-12">
+			<b><h1 class="text-center"> PERFIL DE USUARIOO </h1></b>
 
-			<FORM action= "/CentroMedico/Controlador/Validacion_Insertar_Usuario.php" method="post" class="form-horizontal">
+			<FORM action= "/CentroMedico/Controlador/UsuarioController.php?op=ActualizarUsuario" method="post" class="form-horizontal">
 				<P><h3><b>Datos personales</b></h3>
 				<h4>
-				<div class="form-group">
-					<label class="control-label col-md-2"> Identificación: </label>
-					<div class="col-md-10">
-						<INPUT class="form-control" type="text" name="identificacion" placeholder="CC">
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="control-label col-md-2"> Nombre: </label>
-					<div class="col-md-10">
-						<INPUT class="form-control" type="text" name="nombreUsuario" placeholder="Nombre">
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="control-label col-md-2"> Apellido: </label>
-					<div class="col-md-10">
-						<INPUT class="form-control" type="text" name="nombreUsuario" placeholder="Nombre">
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="control-label col-md-2"> Rol: </label>
-					<div class="col-md-10">
-						<select class="form-control" name="rol" id="rol">
-							<option value="Administrador">Seleccionar</option>
-					        <option value="Administrador">Administrador</option>
-					        <option value="Medico">Medico</option>
-					        <option value="Paciente">Paciente</option>
-					     </select>
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="control-label col-md-2"> Fecha de Nacimiento: </label>
-					<div class="col-md-10">
-						<INPUT class="form-control" type="text" name="nombreUsuario" placeholder="Nombre">
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="control-label col-md-2"> Sexo: </label>
-					<div class="col-md-10">
-						<INPUT class="form-control" type="text" name="nombreUsuario" placeholder="Nombre">
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="control-label col-md-2"> Correo: </label>
-					<div class="col-md-10">
-						<INPUT class="form-control" type="text" name="nombreUsuario" placeholder="Nombre">
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="control-label col-md-2">Telefono: </label>
-					<div class="col-md-10">
-						<INPUT class="form-control" type="text" name="nombreUsuario" placeholder="Nombre">
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="control-label col-md-2"> Contraseña: </label>
-					<div class="col-md-10">
-						<INPUT class="form-control" type="password" name="password" placeholder="Contraseña">
-					</div>
-				</div>
+
+				<?php
+			require "./Modelo/conecta.php";
+			require './Modelo/ClaseUsuario.php';
+			
+			$usuario = new Usuario();
+			$resultado = $usuario->Perfil($_SESSION['cc']);
+			if (isset($resultado)) {
+				if($resultado->num_rows >0 ){
+					while($registro=$resultado->fetch_object()){
+						echo '<div class="form-group">
+								<label class="control-label col-md-2"> Identificación: </label>
+								<div class="col-md-10">
+									<INPUT class="form-control" type="text" name="identificacion" placeholder="CC" disabled value="' . htmlspecialchars($registro->usucc) . '">
+								</div>
+							</div>';
+							
+						echo '<div class="form-group">
+								<label class="control-label col-md-2"> Nombre: </label>
+								<div class="col-md-10">
+									<INPUT class="form-control" type="text" name="nombreUsuario" placeholder="Nombre" disabled value="' . htmlspecialchars($registro->usuNombre) . '">
+								</div>
+							</div>';
+
+						echo '<div class="form-group">
+								<label class="control-label col-md-2"> Apellido: </label>
+								<div class="col-md-10">
+									<INPUT class="form-control" type="text" name="ApellidoUsuario" placeholder="Nombre" disabled value=' . htmlspecialchars($registro->usuApellidos) . '">
+								</div>
+							</div>';						
+						
+						echo '<div class="form-group">
+								<label class="control-label col-md-2"> Fecha de Nacimiento: </label>
+								<div class="col-md-10">
+									<INPUT class="form-control" type="text" name="FechaNacimiento" placeholder="Fecha de nacimiento" disabled value="' . htmlspecialchars($registro->usuFechaNacimiento) . '">
+								</div>
+							</div>';
+
+						echo '<div class="form-group">
+								<label class="control-label col-md-2"> Sexo: </label>
+								<div class="col-md-10">
+									<INPUT class="form-control" type="text" name="Sexo" disabled value="' . htmlspecialchars($registro->usuSexo) . '">
+								</div>
+							</div>';
+
+						echo '<div class="form-group">
+								<label class="control-label col-md-2"> Email: </label>
+								<div class="col-md-10">
+									<INPUT class="form-control" type="text" name="Email" placeholder="Email" value="' . htmlspecialchars($registro->usuCorreo) . '">
+								</div>
+							</div>';
+
+						echo '<div class="form-group">
+								<label class="control-label col-md-2"> Telefono: </label>
+								<div class="col-md-10">
+									<INPUT class="form-control" type="text" name="Telefono" placeholder="Telefono" value="' . htmlspecialchars($registro->susTelefono) . '">
+								</div>
+							</div>';
+
+						echo '<div class="form-group">
+								<label class="control-label col-md-2"> Contraseña: </label>
+								<div class="col-md-10">
+									<INPUT class="form-control" type="Password" name="password" placeholder="Password" value="' . htmlspecialchars($registro->usuPassword) . '">
+								</div>
+							</div>';
+					}
+				}else{  
+					echo '<div class="alert alert-danger text-center">El Usuario No existe en la base de datos</div>';
+				}
+			}
+			?>
 				<center>
 					<button class="btn btn-primary btn-lg" type="submit">Cambiar datos Datos</button>
 				</center></p></h4>

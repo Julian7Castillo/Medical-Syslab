@@ -122,6 +122,14 @@
 			return $resultado;	
 		}
 
+		public function Perfil($identificacion){
+			$this->Conexion=Conectarse();
+			$sql="SELECT usucc, nombre_rol, usuNombre, usuApellidos, usuFechaNacimiento, usuSexo, usuCorreo, susTelefono, Especialidad, usuEstado, usuPassword FROM usuarios INNER JOIN roles ON usuRol = id_rol WHERE usucc = '$identificacion';";
+			$resultado=$this->Conexion->query($sql);
+			$this->Conexion->close();
+			return $resultado;		
+		}
+
 		public function ConsultarUsuario($identificacion){
 			$this->Conexion=Conectarse();
 			$sql="SELECT usucc, nombre_rol, usuNombre, usuApellidos, usuFechaNacimiento, usuSexo, usuCorreo, susTelefono, Especialidad, usuEstado FROM usuarios INNER JOIN roles ON usuRol = id_rol WHERE usucc = '$identificacion';";

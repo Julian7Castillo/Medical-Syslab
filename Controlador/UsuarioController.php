@@ -4,8 +4,8 @@
 	}
 
 	extract($_POST);
-	require "./Modelo/conecta.php";
-	require "./Modelo/ClaseUsuario.php";
+	require "../Modelo/conecta.php";
+	require "../Modelo/ClaseUsuario.php";
 
 	switch($_GET["op"]){
 		case "crearUsuario":

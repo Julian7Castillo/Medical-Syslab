@@ -11,7 +11,7 @@
 
 	<body>
 		<article class="col-xs-12">
-			<h2 class="text-center">Registro de Consultorios</h2><br>
+			<h2 class="text-center">REGISTRO DE CONSULTORIOS</h2><br>
 			<FORM action="/CentroMedico/Controlador/Validacion_insertar_Consultorio.php" method="post" class="form-horizontal">
 				<P><h3><b>Datos del consultorio</b><br><br></h3>
 				<div class="form-group">

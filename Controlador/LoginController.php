@@ -19,7 +19,7 @@
 		$_SESSION['user']= $usuario->usuNombre;
 		$_SESSION['cc']= $usuario->usucc;
 		$_SESSION['rol']= $usuario->usuRol;
-		header("location:../index.php?pag=bienvenida");
+		header("location:../index.php?pag=inicio");
 	}
 	else
 	{

@@ -12,7 +12,7 @@
 	<body>
 		<!--questionario para ingresar nuevos medicos en la  pagina-->
 		<article class="col-xs-12">
-			<h2 class="text-center">Consultar Usuario</h2>
+			<h2 class="text-center">CONSULTAR USUARIO</h2>
 			<FORM action= "" method="post" class="form-horizontal"><!--"./Controlador/UsuarioController.php?op=ConsultarUsuario"--> 
 				<P><h3><b>Digite el Documento de Indentidad del Usuario a Consultar</b><br><br></h3><h4>
 				<div class="form-group">

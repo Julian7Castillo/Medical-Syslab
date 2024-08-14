@@ -7,8 +7,14 @@
     </head>
     <body>
         <!--footer con bootstrap y con los colores de los estilos extras-->
-        <footer>
-            <div class="container">
+        <footer class=" flex">
+            <div class="">
+                <img class="img-footer" src="Vista/img/LogoMS.png" alt="logo-footer">
+                <p class="">Copyright © 2024 Medical Syslab.</p>
+                <p>Web site by Julián Castillo.</p>
+            </div>      
+
+            <div class="">
                 <h3>Visita nuestras redes sociales.</h3>
                 <h5>Redes sociales:<br><br>
                 <i class="bi bi-facebook"></i>
@@ -24,10 +30,39 @@
                 <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
                 </svg>
                 Twitter - X: <a href="https://twitter.com">twitter.com</a><br><br></h5>
-                <div class="center-div">
-                    </h4 class="text-center">Julián Castillo © 2023 Todos los derechos reservados<br></h4>
-                </div>
             </div>  
+
+            <section id="Contactanos" class="center formulario">
+                <h2 class="textcenterhorizontal">Contactanos</h2>
+                <form action="https://formsubmit.co/1e69c37e6faf93e637332ac5e1a06813" method="POST">
+                <fieldset>
+                    <legend>Datos personales</legend> 
+
+                    <label for="Nombre">Nombre: </label>
+                    <input type="text" name="Nombre"><br>
+
+                    <label for="Apellido">Apellido: </label>
+                    <input name="Apellido" type="text">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Datos de contacto</legend> 
+
+                    <label for="email">Correo Electronico: </label>
+                    <input name="email" type="Correo"><br>
+
+                    <label for="Celular">Telefono: </label>
+                    <input name="Celular" type="number"><br>
+
+                    <label for="Tema a tratar">Tema a tratar: </label><br>
+                    <textarea name="Tema a tratar" type="text"></textarea><br>
+                    <input type="reset"><br>
+
+                </fieldset>
+                <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html">
+                <button class="btn-formulario" type="submit">Enviar Formulario</button>
+            </form>
+        </section>
         </footer>
     </body>
 </html>
