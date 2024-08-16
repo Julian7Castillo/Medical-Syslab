@@ -10,7 +10,7 @@
 	</head>
 	<body>
 		<main class="fuente">
-		<video class="video-inicio" muted loop autoplay poster="" src="Vista/img/presentacion.mp4"></video>
+		<video class="video-inicio" muted loop autoplay poster="" src="Vista/img/Presentacion.mp4"></video>
 		
 		<article class="col-xs-12 bienvenida">
 			<h2 class="text-center"><strong>
