@@ -24,9 +24,10 @@
 
 	<body>
 		<article class="col-xs-12">
-			<h2 class="text-center">REGISTRO DE CITAS</h2>					
+			<h2 class="text-center"><strong>REGISTRO DE CITAS</strong></h2>					
 			<FORM action= "/CentroMedico/Controlador/Validacion_insertar_Citas.php" method="post" class="form-horizontal">
 				<p><h3><b>Datos de la cita</b><br></h3><br>
+				<h4>
 				<div class="form-group">
 					<label class="control-label col-md-2">Fecha: </label>
 					<div class="col-md-10">
@@ -40,7 +41,7 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<label class="control-label col-md-2">id Paciente: </label>
+					<label class="control-label col-md-2">identificación Paciente: </label>
 					<div class="col-md-10">
 						<select class="form-control col-sm-5" name="paciente" id="paciente">
 				          <option value="0">Seleccione Paciente</option>
@@ -57,7 +58,7 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<label class="control-label col-md-2">id Medico: </label>
+					<label class="control-label col-md-2">identificación Médico: </label>
 					<div class="col-md-10">
 						<select class="form-control col-sm-5" name="medico" id="medico">
 				          <option value="0">Seleccione Medico</option>
@@ -74,7 +75,7 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<label class="control-label col-md-2">id Consultorio: </label>
+					<label class="control-label col-md-2">identificación Consultorio: </label>
 					<div class="col-md-10">
 						<select class="form-control col-sm-5" name="consultorio" id="consultorio">
 				          <option value="0">Seleccione Consultorio</option>
@@ -90,9 +91,9 @@
 				        </select><br><br><br><br>
 					</div>
 				</div>
-				<center><button class="btn btn-primary btn-lg" type="submit">Enviar Datos</button>
-				<button class="btn btn-primary btn-lg"type="reset">Limpiar Formulario</button></center></p>
+				<center><button class="btn btn-primary btn-lg" type="submit">Enviar Datos</button></center></p>
 			</FORM><br><br>
+			</h4>
 		</article>
 	</body>
 <html>

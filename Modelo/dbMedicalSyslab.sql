@@ -13,7 +13,7 @@ CREATE TABLE usuarios
     usuNombre VARCHAR(30) NOT NULL,
     usuApellidos VARCHAR(50) NOT NULL,
     usuFechaNacimiento DATE NOT NULL,
-    usuSexo ENUM('Femenino','Masculino') NOT NULL,
+    usuSexo ENUM('Femenino','Masculino', 'Indeterminado') NOT NULL,
     usuCorreo VARCHAR(50) NOT NULL,
     usuTelefono CHAR(15) NOT NULL,
     Especialidad VARCHAR(100),
@@ -57,6 +57,13 @@ NOT NULL DEFAULT 'Asignado';
 
 ALTER TABLE `usuarios` CHANGE `usuEstado` `usuEstado` ENUM('Activo','Inactivo', 'Bloqueado') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT 'Activo';
 
+ALTER TABLE `usuarios` 
+CHANGE `usuSexo` `usuSexo` 
+ENUM('Masculino','Femenino', 'Indeterminado') 
+CHARACTER SET utf8mb4 
+COLLATE utf8mb4_general_ci 
+NULL DEFAULT 'Indeterminado';
+
 #insertar datos
 INSERT INTO roles(id_rol, nombre_rol) 
 VALUES (1,"Administrador");
@@ -99,6 +106,8 @@ CALL inscit(20230313,'12:00:00',3002523891,2002523891,1);
 CALL inscit(20230623,'14:00:00',31782646,926371534,2);
 CALL inscit(20230816,'16:15:00',10274836,28461832,4);
 CALL inscit(20231001,'18:30:00',27345892,62836173,3);
+
+#hasta aqui funciona 
 
 #actualizacion
 #elemplo: UPDATE usuarios SET usuRol='2', usuNombre='SEBASTIAN', usuApellidos='HERRERA', usuFechaNacimiento='20001026', usuSexo='Masculino', usuCorreo='SEBA@GMSIL.COM', susTelefono='3112456789', Especialidad='cardiologia Clinica',usuPassword ='123456', usuEstado='Activo' WHERE usucc ='10263846';

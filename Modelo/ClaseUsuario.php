@@ -1,5 +1,5 @@
 <?php
-	class Usuario{
+	class usuarioMedicalSyslab{
 		private $identificacion;
 		private $rol;
 		private $nombre;

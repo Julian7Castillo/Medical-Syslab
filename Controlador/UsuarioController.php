@@ -27,7 +27,7 @@
 			}
 
 			try{
-				$objUsuario = New Usuario();
+				$objUsuario = New usuarioMedicalSyslab();
 				$objUsuario->crearUsuario($_POST['identificacion'], $_POST['rol'], $_POST['nombreUsuario'], $_POST['ApellidoUsuario'], $_POST['Fecha'], $_POST['Sexo'], $_POST['email'], $_POST['telefono'],$especialidad,$_POST['password'], 'Activo');
 				$resultado=$objUsuario->agregarUsuario();
 			
@@ -46,7 +46,7 @@
 
 		case "ActualizarUsuario":
 
-			$objupUsuario=New Usuario();
+			$objupUsuario=New usuarioMedicalSyslab();
 			$objupUsuario->crearUsuario($_POST['rol'], $_POST['identificacion'], $_POST['nombreUsuario'], $_POST['password'], $_POST['estado']);
 			$resultado=$objupUsuario->ActualizarUsuario();
 			
@@ -58,7 +58,7 @@
 		case "ConsultarUsuario":
 
 			if (isset($_POST['usuario'])) {
-				$objUsuario= new Usuario();
+				$objUsuario= new usuarioMedicalSyslab();
 				$resultado=$objUsuario->ConsultarUsuario($_POST['usuario']);
 				return $resultado;
 				
@@ -69,7 +69,7 @@
 
 		case "EliminarUsuario":
 
-			$objUsuario=New Usuario();
+			$objUsuario=New usuarioMedicalSyslab();
 			$objUsuario->crearUsuario($_POST['rol'], $_POST['identificacion'], $_POST['nombreUsuario'], $_POST['password'], $_POST['estado']);
 			$resultado=$objUsuario->BorrarUsuario();
 			

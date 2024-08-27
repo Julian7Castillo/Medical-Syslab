@@ -11,11 +11,11 @@
 
 	<body>
 		<article class="col-xs-12">
-			<b><h2 class="text-center">LISTADO DE USUARIOS</h2></b>
+			<b><h2 class="text-center"><strong>LISTADO DE USUARIOS</strong></h2></b>
 				<?php
 				require "./Modelo/conecta.php";
 				require './Modelo/ClaseUsuario.php';
-				$usuario = new Usuario();
+				$usuario = new usuarioMedicalSyslab();
 				$resultado = $usuario->ListarUsuarios();
 				if (isset($resultado)) {
 					if($resultado->num_rows >0 ){

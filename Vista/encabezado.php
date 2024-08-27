@@ -14,7 +14,7 @@
                     </a>   
                 </h1>
                 <?php  
-                    if (!(isset($_SESSION["cc"]))) {
+                    if (!(isset($_SESSION["ccMedicalSyslab"]))) {
                 ?>
                         <a class="registro titulo" href="index.php?pag=login"><button class="btn btn-primary btn-lg"> Iniciar Sesión</button></a>
                     <?php 
@@ -28,14 +28,14 @@
                                     <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
                                 </svg>
                                 <div class="spaceMargin">
-                                    <h7>Usuario: <?php echo$_SESSION['user']; ?><br>
+                                    <h7>Usuario: <?php echo$_SESSION['userMedicalSyslab']; ?><br>
                                     Rol: 
                                     <?php 
-                                        if($_SESSION['rol'] == 1){
+                                        if($_SESSION['rolMedicalSyslab'] == 1){
                                             echo 'Administrador'; 
-                                        }if($_SESSION['rol'] == 2){
+                                        }if($_SESSION['rolMedicalSyslab'] == 2){
                                             echo 'Medico'; 
-                                        }if($_SESSION['rol'] == 3){
+                                        }if($_SESSION['rolMedicalSyslab'] == 3){
                                             echo 'Paciente'; 
                                         }else{
 

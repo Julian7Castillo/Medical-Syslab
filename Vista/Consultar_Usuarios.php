@@ -12,9 +12,9 @@
 	<body>
 		<!--questionario para ingresar nuevos medicos en la  pagina-->
 		<article class="col-xs-12">
-			<h2 class="text-center">CONSULTAR USUARIO</h2>
+			<h2 class="text-center"><strong>CONSULTAR USUARIO</strong></h2>
 			<FORM action= "" method="post" class="form-horizontal"><!--"./Controlador/UsuarioController.php?op=ConsultarUsuario"--> 
-				<P><h3><b>Digite el Documento de Indentidad del Usuario a Consultar</b><br><br></h3><h4>
+				<P><h3><b>Digite el documento de indentidad del usuario a consultar</b><br><br></h3><h4>
 				<div class="form-group">
 					<label class="control-label col-md-2"> Identificación del consultorio: </label>
 					<div class="col-md-10">
@@ -29,7 +29,7 @@
 			require "./Modelo/conecta.php";
 			require './Modelo/ClaseUsuario.php';
 			if (isset($_POST['id'])) {
-				$usuario = new Usuario();
+				$usuario = new usuarioMedicalSyslab();
 				$resultado = $usuario->ConsultarUsuario($_POST['id']);
 				if (isset($resultado)) {
 					if($resultado->num_rows >0 ){

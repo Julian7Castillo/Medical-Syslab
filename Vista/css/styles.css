@@ -23,10 +23,6 @@ aside{
     color: #fff;
 }
 
-a:link{
-    color: blue;
-}
-
 aside{
     background: #c0392b;
     color: #fff;
@@ -39,6 +35,7 @@ footer{
     justify-content: space-evenly;
     align-content: flex-start;
     padding: 2rem 0rem 2rem 0rem;
+    font-size: 1.5rem;
 }
 
 details summary{
@@ -50,11 +47,23 @@ details summary,p,li{
     margin-bottom: 2rem;
 }
 
+textarea, input{
+    width: 100%;
+}
+
+fieldset{
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+}
 /*UTILIDADES*/
 
 .flex{
     display: flex;
     margin: 0px 0px 0px 0px;
+}
+
+.bet{
+    justify-content: space-between;
 }
 
 h4{
@@ -80,6 +89,10 @@ h4{
     position:unset;
     /*top: auto;*/
     /*left: auto;*/
+}
+
+.btn-formulario{
+    width: 100%;
 }
 
 .resultOperation{
@@ -222,4 +235,35 @@ h4{
     justify-content: space-between;
     align-items: center;
     margin:auto auto;
+}
+
+.text-white{
+    color: #fff;
+}.text-black{
+    color: #000;
+}
+
+.redes-titulo{
+    margin-bottom: 5rem;
+}
+
+
+/*boton whats*/
+
+.floating-button {
+    position: fixed;
+    bottom: 20px; /* Ajusta la distancia del borde inferior según sea necesario */
+    right: 20px; /* Ajusta la distancia del borde derecho según sea necesario */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+.floating-button img {
+    width: 60px; /* Ajusta el tamaño del icono según sea necesario */
+    height: 60px;
+    border-radius: 50%; /* Hace que la imagen sea circular */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Sombra suave para efecto flotante */
+}
+
+.password{
+    width: 80%;
 }

@@ -17,11 +17,11 @@
 				<h4>
 
 				<?php
-			require "./Modelo/conecta.php";
-			require './Modelo/ClaseUsuario.php';
+			require "Modelo/conecta.php";
+			require 'Modelo/ClaseUsuario.php';
 			
-			$usuario = new Usuario();
-			$resultado = $usuario->Perfil($_SESSION['cc']);
+			$usuario = new usuarioMedicalSyslab();
+			$resultado = $usuario->Perfil($_SESSION['ccMedicalSyslab']);
 			if (isset($resultado)) {
 				if($resultado->num_rows >0 ){
 					while($registro=$resultado->fetch_object()){

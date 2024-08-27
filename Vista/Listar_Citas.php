@@ -11,7 +11,7 @@
 
 	<body>
 		<article class="col-xs-12">
-			<b><h2 class="text-center"> LISTADO DE CITAS </h2></b>
+			<b><h2 class="text-center"><strong>LISTADO DE CITAS</strong></h2></b>
 
 			<?php
 				require "./Modelo/conecta.php";

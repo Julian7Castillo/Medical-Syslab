@@ -12,9 +12,9 @@
 	<body>
 		<!--questionario para ingresar nuevos medicos en la  pagina-->
 		<article class="col-xs-12">
-			<h2 class="text-center">REGISTRO DE USUARIOS</h2>
+			<h2 class="text-center"><strong>REGISTRO DE USUARIOS</strong></h2>
 			<FORM action= "Controlador/UsuarioController.php?op=crearUsuario" method="post" class="form-horizontal">
-				<P><h3><b>Datos personales</b></h3><br><br>
+				<P><h3><b>Datos personales</b><br><br></h3>
 				<h4>
 				<div class="form-group">
 					<label class="control-label col-md-2"> Identificación: </label>
@@ -55,9 +55,9 @@
 					<label class="control-label col-md-2"> Sexo: </label>
 					<div class="col-md-10">
 						<select class="form-control" name="Sexo" id="Sexo" require="">
-							<option value="Administrador">Seleccionar</option>
-					        <option value="Administrador">Masculino</option>
-					        <option value="Medico">Femenino</option>
+							<option value="seleccione">Seleccionar</option>
+					        <option value="Masculino">Masculino</option>
+					        <option value="Femenino">Femenino</option>
 					     </select>
 					</div>
 				</div>

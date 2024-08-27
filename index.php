@@ -41,7 +41,7 @@
 		<div class="container-fluid cabecera fixed-top">
 			<section class="row">
 				<?php 
-					if (isset($_SESSION["cc"])) {
+					if (isset($_SESSION["ccMedicalSyslab"])) {
 						include "Vista/menu.php";
 					}
 				?>
@@ -55,6 +55,12 @@
 					</div>
 			</section>
 		</div>
+
+		<div class="floating-button">
+        <a href="https://wa.me/tunumerodeWhatsApp" target="_blank">
+            <img src="Vista/img/whatsapp.png" alt="WhatsApp">
+        </a>
+    </div>
 
 		<!--footer con bootstrap y con los colores de los estilos extras-->
 		<?php include "Vista/footer.php"?>
