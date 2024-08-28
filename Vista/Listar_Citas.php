@@ -23,15 +23,14 @@
 						echo	'<h1>Datos de Citas</h1>
 								<table class="table table-hover text-center mt-3">
 									<thead>
-									<th class="text-center">id.</th>
-									<th class="text-center">Paciente</th>
-									<th class="text-center">Medico</th>
-									<th class="text-center">Consultorio</th>
-									<th class="text-center">Fecha</th>
-									<th class="text-center">Hora</th>
-									<th class="text-center">Estado</th>
-									<th class="text-center">Observaciones</th>
-								
+										<th class="text-center">id.</th>
+										<th class="text-center">Paciente</th>
+										<th class="text-center">Medico</th>
+										<th class="text-center">Consultorio</th>
+										<th class="text-center">Fecha</th>
+										<th class="text-center">Hora</th>
+										<th class="text-center">Estado</th>
+										<th class="text-center">Observaciones</th>
 									</thead>
 									<tbody>';
 						while($registro=$resultado->fetch_object()){

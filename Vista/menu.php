@@ -7,9 +7,9 @@
 		<title>menu</title>
 	</head> 
 	<body>
-		<nav class="col-xs-12 containers btn-group menu-centrado">
+		<nav class="col-xs-12 containers btn-group menu-centrado ">
 
-			<div class="center-div">
+			<div class="center-div responsive">
 
 			<?php
 			

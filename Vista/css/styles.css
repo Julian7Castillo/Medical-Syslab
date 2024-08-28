@@ -49,21 +49,28 @@ details summary,p,li{
 
 textarea, input{
     width: 100%;
+    margin-bottom: 1rem;
 }
 
 fieldset{
     margin-right: 2rem;
     margin-bottom: 2rem;
 }
+
 /*UTILIDADES*/
 
 .flex{
     display: flex;
     margin: 0px 0px 0px 0px;
+    
 }
 
 .bet{
     justify-content: space-between;
+}
+
+.around{
+    justify-content: space-around;
 }
 
 h4{
@@ -108,7 +115,7 @@ h4{
 }
 
 .spaceMargin{
-    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .buttonDelete{
@@ -266,4 +273,15 @@ h4{
 
 .password{
     width: 80%;
+}
+
+.usuario-btn{
+    justify-content:right;
+}
+
+.responsive{
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+
 }

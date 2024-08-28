@@ -7,7 +7,7 @@
 
     <body>
         <header>
-            <div class="flex space">
+            <div class="flex space bet responsive">
                 <h1>
                     <a class="titulo" href="index.php?pag=inicio">
                     <img src="Vista/img/logoMS.png"al="logo" style="width:80px;height:80px;"> Medical SysLab 
@@ -23,13 +23,10 @@
                         <div class="flex botonPerfil">
                             <button type="button" class="btn btn-outline-danger botonPerfil flex" >
                             <a class="botonPerfil flex" href="index.php?pag=perfil">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
-                                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
-                                </svg>
-                                <div class="spaceMargin">
-                                    <h7>Usuario: <?php echo$_SESSION['userMedicalSyslab']; ?><br>
-                                    Rol: 
+                            
+                                <div class="spaceMargin usuario-btn">
+                                    <h7>Usuario: <?php echo$_SESSION['userMedicalSyslab']; ?></h7><br>
+                                    <h7>Rol: 
                                     <?php 
                                         if($_SESSION['rolMedicalSyslab'] == 1){
                                             echo 'Administrador'; 
@@ -42,6 +39,10 @@
                                         }
                                     ?></h7>
                                 </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                                </svg>
                             </a>
                         </div>
                         <?php
