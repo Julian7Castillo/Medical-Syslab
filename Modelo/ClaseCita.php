@@ -112,9 +112,53 @@
 			$this->Conexion->close();
 			return $resultado;	
 		}
-		public function ConsultarCitasgate(){
+		
+		public function ListarCitasPersonales($paciente){
 			$this->Conexion=Conectarse();
-			$sql="select idCita,pacNombres, pacApellidos, medNombres, medApellidos, medEspecialidad,conNombre, citFecha, citHora, citEsado, citObservaciones from pacientes, medicos, consultorios, citas where (idPaciente = citPaciente) and (idMedico = citMedico) and (idConsultorio = citConsultorio) and (citEsado='Atendido')";
+			$sql="SELECT 
+					citas.idCita, 
+					pacientes.usuNombre AS pacienteNombre, 
+					pacientes.usuApellidos AS pacienteApellidos, 
+					medicos.usuNombre AS medicoNombre, 
+					medicos.usuApellidos AS medicoApellidos, 
+					consultorios.conNombre, 
+					citas.citFecha, 
+					citas.citHora, 
+					citas.citEstado, 
+					citas.citObservaciones 
+				FROM 
+					citas 
+				INNER JOIN usuarios AS pacientes ON citas.citPaciente = pacientes.usucc
+				INNER JOIN usuarios AS medicos ON citas.citMedico = medicos.usucc 
+				INNER JOIN consultorios ON citas.citConsultorio = consultorios.idConsultorio
+				WHERE 
+                	citas.citPaciente = $paciente";
+			$resultado=$this->Conexion->query($sql);
+			$this->Conexion->close();
+			return $resultado;	
+		}
+
+		public function ListarCitasAsignadas($medico){
+			$this->Conexion=Conectarse();
+			$sql="SELECT 
+					citas.idCita, 
+					pacientes.usuNombre AS pacienteNombre, 
+					pacientes.usuApellidos AS pacienteApellidos, 
+					medicos.usuNombre AS medicoNombre, 
+					medicos.usuApellidos AS medicoApellidos, 
+					consultorios.conNombre, 
+					citas.citFecha, 
+					citas.citHora, 
+					citas.citEstado, 
+					citas.citObservaciones 
+				FROM 
+					citas 
+				INNER JOIN usuarios AS pacientes ON citas.citPaciente = pacientes.usucc 
+				INNER JOIN usuarios AS medicos ON citas.citMedico = medicos.usucc 
+				INNER JOIN consultorios ON citas.citConsultorio = consultorios.idConsultorio
+				WHERE
+					citas.citMedico = '$medico'";
+
 			$resultado=$this->Conexion->query($sql);
 			$this->Conexion->close();
 			return $resultado;	

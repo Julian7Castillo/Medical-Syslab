@@ -132,7 +132,7 @@
 
 		public function ConsultarUsuario($identificacion){
 			$this->Conexion=Conectarse();
-			$sql="SELECT usucc, nombre_rol, usuNombre, usuApellidos, usuFechaNacimiento, usuSexo, usuCorreo, susTelefono, Especialidad, usuEstado FROM usuarios INNER JOIN roles ON usuRol = id_rol WHERE usucc = '$identificacion';";
+			$sql="SELECT usucc, nombre_rol, usuNombre, usuApellidos, usuFechaNacimiento, usuSexo, usuCorreo, susTelefono, Especialidad, usuEstado FROM usuarios INNER JOIN roles ON usuRol = id_rol WHERE usucc = ?;";
 			$resultado=$this->Conexion->query($sql);
 			$this->Conexion->close();
 			return $resultado;		
